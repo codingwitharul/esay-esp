@@ -1,0 +1,3 @@
+theme: jekyll-theme-cayman
+title: EasyESP Connect
+description: A modern, seamless Jetpack Compose Android app for provisioning ESP32 devices to local Wi-Fi networks.

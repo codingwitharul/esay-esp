@@ -1,0 +1,21 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.easyesp.shared" >
+4
+5    <uses-sdk android:minSdkVersion="24" />
+5-->INJECTED
+5-->INJECTED
+6
+7    <application>
+7-->/Users/shady/AndroidStudioProjects/EasyEsp/shared/src/main/AndroidManifest.xml:4:5-9:19
+8        <activity
+8-->/Users/shady/AndroidStudioProjects/EasyEsp/shared/src/main/AndroidManifest.xml:5:9-8:72
+9            android:name="com.easyesp.shared.ui.EasyEspActivity"
+9-->/Users/shady/AndroidStudioProjects/EasyEsp/shared/src/main/AndroidManifest.xml:6:13-47
+10            android:exported="false"
+10-->/Users/shady/AndroidStudioProjects/EasyEsp/shared/src/main/AndroidManifest.xml:7:13-37
+11            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+11-->/Users/shady/AndroidStudioProjects/EasyEsp/shared/src/main/AndroidManifest.xml:8:13-69
+12    </application>
+13
+14</manifest>

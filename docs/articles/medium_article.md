@@ -1,6 +1,6 @@
-# The Painless Way to Connect ESP32 Devices to Wi-Fi on Android 📱⚡
+# How to Connect ESP32 to Wi-Fi on Android (The Right Way) 📱⚡
 
-**How to build seamless IoT provisioning flows using Jetpack Compose, Ktor, and MVI Architecture.**
+**Stop frustrating your IoT users. Build a seamless ESP32 Wi-Fi provisioning flow using Jetpack Compose, Ktor, and MVI Architecture.**
 
 If you’ve ever built an IoT product, you know the biggest hurdle isn't writing the firmware or building the cloud backend—it’s the **onboarding process**. Getting a screenless microcontroller (like an ESP32) connected to a user's home Wi-Fi network is notoriously frustrating. 
 

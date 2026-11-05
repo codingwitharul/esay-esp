@@ -1,4 +1,5 @@
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+import org.gradle.api.publish.maven.MavenPublication
 
 plugins {
     alias(libs.plugins.androidLibrary)
@@ -6,6 +7,7 @@ plugins {
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.google.devtools.ksp)
     alias(libs.plugins.jetbrains.kotlin.plugin.serialization)
+    id("maven-publish")
 }
 
 android {
@@ -23,6 +25,12 @@ android {
     }
     buildFeatures {
         compose = true
+    }
+
+    publishing {
+        singleVariant("release") {
+            withSourcesJar()
+        }
     }
 }
 
@@ -54,4 +62,17 @@ dependencies {
     implementation(libs.ktor.client.android)
     implementation(libs.ktor.client.content.negotiation)
     implementation(libs.ktor.serialization.kotlinx.json)
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            create<MavenPublication>("release") {
+                from(components["release"])
+                groupId = "com.github.codingwitharul"
+                artifactId = "esay-esp"
+                version = "1.0.0"
+            }
+        }
+    }
 }

@@ -19,11 +19,21 @@
 ## 🚀 Quick Start Integration
 
 ### 1. Add Dependencies
-Add the `:shared` module as a dependency to your Android application:
+First, add JitPack to your project-level `settings.gradle.kts` (or `build.gradle`):
 ```kotlin
-// In your app/build.gradle.kts
+dependencyResolutionManagement {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url = uri("https://jitpack.io") }
+    }
+}
+```
+
+Then, add the library to your app-level `build.gradle.kts`:
+```kotlin
 dependencies {
-    implementation(project(":shared"))
+    implementation("com.github.codingwitharul:esay-esp:1.0.0")
 }
 ```
 

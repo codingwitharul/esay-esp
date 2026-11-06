@@ -4,9 +4,11 @@ If you've ever built a hardware product with an ESP32, you know the hardest part
 
 Users have to leave your app, go to their phone settings, connect to a temporary hotspot, ignore the "No Internet" warnings, return to the app, and pray it doesn't time out. On modern Android versions, the OS will often silently route setup requests to Cellular Data, causing the setup to fail completely. 
 
-As developers, we can do better. 
+I’ve been spending my nights and weekends diving deep into embedded systems—building automated Zigbee devices, smart home integrations, and even AI-controlled robotics. I kept running into this exact networking bottleneck, so I decided to fix it once and for all.
 
-Today, I’m incredibly excited to open-source **EasyESP Android** — a battle-tested library that makes ESP32 Wi-Fi provisioning completely seamless and fully automated! ✨
+After a massive 2-hour vibe-coding session (and rigorous real-world testing on my own ESP32 boards), I am incredibly excited to open-source **EasyESP Android**. 
+
+It’s a battle-tested library that makes ESP32 Wi-Fi provisioning completely seamless and fully automated! ✨
 
 **What makes it different?**
 📡 **Automated Discovery:** Passively scans for local ESP32 devices without any user input.
@@ -17,12 +19,12 @@ Today, I’m incredibly excited to open-source **EasyESP Android** — a battle-
 And it doesn't stop at Android...
 
 **For Hardware Developers:**
-I've also published the companion C++ firmware to the **Official Arduino Library Manager**! Just search for `EasyEspAndroid` in your Arduino IDE to instantly add an asynchronous, dual-mode (AP + STA) configuration portal to your ESP32.
+I've also published the companion C++ firmware to the **Official Arduino Library Manager**! Just search for `EasyEspAndroid` in your Arduino IDE to instantly add an asynchronous, dual-mode (AP + STA) configuration portal to your ESP32 robots or smart home nodes.
 
-Check out the full GitHub repository, the Medium deep-dive, and the documentation below! If this saves you a few days of networking headaches, I'd love a ⭐ on GitHub!
+Whether you're building the next great AI hardware product or just hacking together some smart LEDs in your garage, I hope this saves you a few days of networking headaches. I'd love a ⭐ on GitHub!
 
 🔗 **GitHub Repo:** https://github.com/codingwitharul/esay-esp
 📚 **Documentation:** https://codingwitharul.github.io/esay-esp/
 📝 **Medium Article:** [Link to your Medium Article here]
 
-#AndroidDev #Kotlin #JetpackCompose #IoT #ESP32 #Arduino #OpenSource #Hardware #AndroidDevelopment
+#AndroidDev #Kotlin #JetpackCompose #IoT #ESP32 #Arduino #EmbeddedSystems #Robotics #SmartHome #OpenSource

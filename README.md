@@ -82,8 +82,8 @@ launcher.launch(EasyEspConfig())
 ### 3. Flash the Firmware (Arduino Library)
 To make your ESP32 compatible, you can use the official `EasyEspAndroid` Arduino Library.
 
-1. Download the `firmware/EasyEspAndroid` folder from this repository.
-2. Place it in your Arduino `libraries` folder (e.g., `Documents/Arduino/libraries/EasyEspAndroid`).
+1. Download this repository as a ZIP file.
+2. In Arduino IDE, go to **Sketch -> Include Library -> Add .ZIP Library...** and select the ZIP.
 3. Open Arduino IDE and go to **File -> Examples -> EasyEspAndroid -> BasicSetup**.
 4. Select your ESP32 board and upload at `115200 baud`.
 

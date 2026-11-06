@@ -79,9 +79,32 @@ val launcher = registerForActivityResult(EasyEspSetupContract()) { result ->
 launcher.launch(EasyEspConfig())
 ```
 
-### 3. Flash the Firmware
-1. Open `firmware/esp32_wifi_setup.ino` in your Arduino IDE.
-2. Select your ESP32 board and upload at `115200 baud`.
+### 3. Flash the Firmware (Arduino Library)
+To make your ESP32 compatible, you can use the official `EasyEspConnect` Arduino Library.
+
+1. Download the `firmware/EasyEspConnect` folder from this repository.
+2. Place it in your Arduino `libraries` folder (e.g., `Documents/Arduino/libraries/EasyEspConnect`).
+3. Open Arduino IDE and go to **File -> Examples -> EasyEspConnect -> BasicSetup**.
+4. Select your ESP32 board and upload at `115200 baud`.
+
+Here is how simple your ESP32 code becomes:
+```cpp
+#include <EasyEspConnect.h>
+
+EasyEspConnect easyEsp;
+
+void setup() {
+  Serial.begin(115200);
+  easyEsp.onConnected([](String ip) {
+    Serial.println("Wi-Fi connected! IP: " + ip);
+  });
+  easyEsp.begin("EasyEsp-Setup"); // Start the hotspot
+}
+
+void loop() {
+  easyEsp.loop(); // Handle incoming setup requests from Android
+}
+```
 
 ---
 

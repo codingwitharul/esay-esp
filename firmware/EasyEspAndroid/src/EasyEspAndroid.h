@@ -1,17 +1,17 @@
-#ifndef EASY_ESP_CONNECT_H
-#define EASY_ESP_CONNECT_H
+#ifndef EASY_ESP_ANDROID_H
+#define EASY_ESP_ANDROID_H
 
 #include <WiFi.h>
 #include <WebServer.h>
 #include <functional>
 
 /**
- * EasyEspConnect Library
+ * EasyEspAndroid Library
  * Handles dual-mode Wi-Fi AP provisioning and Network Scanning.
  */
-class EasyEspConnect {
+class EasyEspAndroid {
 public:
-    EasyEspConnect();
+    EasyEspAndroid();
 
     /**
      * Initializes the Wi-Fi AP for provisioning.

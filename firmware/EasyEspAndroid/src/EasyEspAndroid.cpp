@@ -1,13 +1,13 @@
-#include "EasyEspConnect.h"
+#include "EasyEspAndroid.h"
 
 // Global pointer required to map WebServer callbacks to our class instance
-EasyEspConnect* easyEspInstance = nullptr;
+EasyEspAndroid* easyEspInstance = nullptr;
 
-EasyEspConnect::EasyEspConnect() : server(80), lastWifiStatus(-1), connectedCallback(nullptr) {
+EasyEspAndroid::EasyEspAndroid() : server(80), lastWifiStatus(-1), connectedCallback(nullptr) {
     easyEspInstance = this;
 }
 
-void EasyEspConnect::begin(const char* apSsid, const char* apPassword) {
+void EasyEspAndroid::begin(const char* apSsid, const char* apPassword) {
     Serial.println("\n[EasyESP] ESP32 Wi-Fi Setup Firmware Starting...");
 
     // Force disconnect and clear old Wi-Fi settings saved in NVS memory
@@ -39,7 +39,7 @@ void EasyEspConnect::begin(const char* apSsid, const char* apPassword) {
     Serial.println("[EasyESP] HTTP server started on port 80.");
 }
 
-void EasyEspConnect::loop() {
+void EasyEspAndroid::loop() {
     server.handleClient();
 
     // Monitor Wi-Fi connection status
@@ -56,15 +56,15 @@ void EasyEspConnect::loop() {
     }
 }
 
-bool EasyEspConnect::isConnected() {
+bool EasyEspAndroid::isConnected() {
     return WiFi.status() == WL_CONNECTED;
 }
 
-void EasyEspConnect::onConnected(std::function<void(String ip)> callback) {
+void EasyEspAndroid::onConnected(std::function<void(String ip)> callback) {
     connectedCallback = callback;
 }
 
-void EasyEspConnect::handleGetNetworks() {
+void EasyEspAndroid::handleGetNetworks() {
     Serial.println("[EasyESP] HTTP GET /networks received. Scanning surrounding Wi-Fi networks...");
     int n = WiFi.scanNetworks();
     Serial.print("[EasyESP] Scan complete. Found ");
@@ -81,7 +81,7 @@ void EasyEspConnect::handleGetNetworks() {
     server.send(200, "application/json", json);
 }
 
-void EasyEspConnect::handleSetCredentials() {
+void EasyEspAndroid::handleSetCredentials() {
     Serial.println("[EasyESP] HTTP POST /credentials received.");
     if (server.hasArg("ssid") && server.hasArg("password")) {
         String ssid = server.arg("ssid");

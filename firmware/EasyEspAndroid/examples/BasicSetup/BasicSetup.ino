@@ -1,7 +1,7 @@
-#include <EasyEspConnect.h>
+#include <EasyEspAndroid.h>
 
 // Create an instance of the library
-EasyEspConnect easyEsp;
+EasyEspAndroid easyEsp;
 
 void setup() {
   Serial.begin(115200);

@@ -80,18 +80,18 @@ launcher.launch(EasyEspConfig())
 ```
 
 ### 3. Flash the Firmware (Arduino Library)
-To make your ESP32 compatible, you can use the official `EasyEspConnect` Arduino Library.
+To make your ESP32 compatible, you can use the official `EasyEspAndroid` Arduino Library.
 
-1. Download the `firmware/EasyEspConnect` folder from this repository.
-2. Place it in your Arduino `libraries` folder (e.g., `Documents/Arduino/libraries/EasyEspConnect`).
-3. Open Arduino IDE and go to **File -> Examples -> EasyEspConnect -> BasicSetup**.
+1. Download the `firmware/EasyEspAndroid` folder from this repository.
+2. Place it in your Arduino `libraries` folder (e.g., `Documents/Arduino/libraries/EasyEspAndroid`).
+3. Open Arduino IDE and go to **File -> Examples -> EasyEspAndroid -> BasicSetup**.
 4. Select your ESP32 board and upload at `115200 baud`.
 
 Here is how simple your ESP32 code becomes:
 ```cpp
-#include <EasyEspConnect.h>
+#include <EasyEspAndroid.h>
 
-EasyEspConnect easyEsp;
+EasyEspAndroid easyEsp;
 
 void setup() {
   Serial.begin(115200);
